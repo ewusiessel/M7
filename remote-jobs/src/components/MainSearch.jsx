@@ -7,13 +7,21 @@ export default class MainSearch extends React.Component {
   };
 
   baseEndpoint = "https://remotive.io/api/remote-jobs?search=";
+
+  handlechange = (event) => {
+    this.setState({ query: event.target.value });
+  };
   render() {
     return (
       <Container>
         <Row>
           <Col>
             <Form>
-              <Form.Control type="search" value={this.state.query} />
+              <Form.Control
+                type="search"
+                value={this.state.query}
+                onChange={this.handlChange}
+              />
             </Form>
           </Col>
         </Row>
