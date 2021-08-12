@@ -7,7 +7,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <Route path="/" component={MainSearch} />
+      <Route exact path="/" component={MainSearch} />
       {/* <Route path='/:companyId' component={CompanySearchResults}> */}
     </BrowserRouter>
   );
